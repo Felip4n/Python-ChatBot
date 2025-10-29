@@ -1,0 +1,9 @@
+
+
+# Ignorar arquivos temporários
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar configurações locais
+.env
