@@ -1,9 +1,4 @@
-
-
-# Ignorar arquivos temporários
+venv/
+service_account.json
 __pycache__/
 *.pyc
-*.pyo
-
-# Ignorar configurações locais
-.env
