@@ -25,7 +25,6 @@ app = FastAPI()
 
 
 def ultramsg_send(to, msg):
-    """Enviar mensagem pelo UltraMsg."""
     url = f"https://api.ultramsg.com/{ULTRA_INSTANCE}/messages/chat"
     payload = {"token": ULTRA_TOKEN, "to": to, "body": msg}
     requests.post(url, data=payload)
@@ -41,10 +40,8 @@ async def receive_message(request: Request):
     if not sender:
         return {"status": "ignored"}
 
-    # Seu fluxo de chatbot
     resposta = executar_acao(message, sender)
 
-    # Responder via UltraMsg
     ultramsg_send(sender, resposta)
 
     return {"status": "success", "msg": resposta}
