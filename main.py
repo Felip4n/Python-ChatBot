@@ -31,7 +31,7 @@ def ultramsg_send(to, msg):
     requests.post(url, data=payload)
 
 
-@app.post("/webhook")
+@app.post("/webhook/whatsapp")
 async def receive_message(request: Request):
     data = await request.json()
 
