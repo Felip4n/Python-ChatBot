@@ -29,7 +29,7 @@ def get_fallback(user_id):
 
 def falar_com_atendente(user_id):
     clear_state(user_id)
-    return "Certo, vou te encaminhar para um atendente humano 👨‍💼"
+    return "Certo, entre em contato com nosso atendente pelo telefone: (44) 99999-9999."
 
 def finalizar_atendimento(user_id):
     clear_state(user_id)
